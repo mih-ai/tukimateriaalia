@@ -115,10 +115,10 @@ sudo nano /etc/rc.local
 seuraavat rivit juuri ennen viimeistä "exit 0" -riviä:
 
 ```sh
-sudo hostapd /etc/hostapd/hostapd.conf
+sudo hostapd /etc/hostapd/hostapd.conf &
 ```
 
-Erityisesti, huomaa ylläoleva hostapd-käynnistysrivi ja sen tärkeys! Sen puuttuminen (useissa muissa ohjeissa) on aihettanut monelle paljon päänvaivaa. Tiedosto rc.local huolehtii siitä, että aina kun järjestelmä käynnistyy, kyseinen toiminto tapahtuu ja suoritetaan eli tässä tapauksessa hotspotti laitetaan päälle.
+Erityisesti, huomaa ylläoleva hostapd-käynnistysrivi ja sen tärkeys! Sen puuttuminen (useissa muissa ohjeissa) on aihettanut monelle paljon päänvaivaa. Tiedosto rc.local huolehtii siitä, että aina kun järjestelmä käynnistyy, kyseinen toiminto tapahtuu ja suoritetaan eli tässä tapauksessa hotspotti laitetaan päälle. Muista & -merkki loppuun!
 
 # Entä jos se ei sittenkään toimi noilla ohjeilla?
 
