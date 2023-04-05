@@ -6,9 +6,9 @@ Huomionarvoista on se, että "raspin" kaikenlaiset yksityiskohdat ovat aikojen s
 
 Oletetaan että käytettävä raspi on kaikin puolin kunnossa ja siinä on ajantasainen käyttöjärjestelmä. Sen vuoksi emme välttämättä tarvitse komentoja: 
 
-`sh
+```sh
 sudo apt-get update;sudo apt-get upgrade
-`
+```
 
 Mutta, tärkeää on asentaa hotspottia varten "hostapd" (lyhenne sanoista hot ja niin edelleen) ja sen tarvitsema tukitoiminto "dnsmasq" (samoin lyhenne...):
 
@@ -21,9 +21,9 @@ sudo apt-get install dnsmasq
 
 Tehdään varsinaiset säädöt tukiasemalle siten että ensin määritetään haluttu kiinteä IP mitä halutaan käyttää:
 
-`sh
+```sh
 sudo nano /etc/dhcpcd.conf
-`
+```
 
 Tähän tulee lisätä seuraavat rivit tiedoston loppuun (esimerkkinä jos haluttu IP-osoite olisi allaoleva): 
 
@@ -60,9 +60,9 @@ on ihan hyvä lähtökohta. Ja tietysti, korvaa esimerkin IP-osoite sillä osoit
 
 Luo uusi tiedosto komennolla:
 
-`sh
+```sh
 sudo nano /etc/hostapd/hostapd.conf
-`
+```
 Kirjoita tähän seuraavat tiedot:
 
 ```sh
@@ -93,24 +93,24 @@ Huomaa yllä olevassa lopussa oleva maakoodi, joka on "uutena juttuna" voi olla 
 
 Seuraavaksi, jotta edellä huolella laadityt määritykset ovat "hostapd":n löydettävissä muokkaa komennolla:
 
-`sh
+```sh
 sudo nano /etc/default/hostapd
-`
+```
 
 avautuvan tiedoston kohta "#DAEMON_CONF="" seuraavankaltaiseksi:
 
-`sh
+```sh
 DAEMON_CONF="/etc/hostapd/hostapd.conf"
-`
+```
 ...ja kaikilla näillä vaiheilla nyt itse "hostapd" on nyt säädetty kohdalleen.
 
 # Määritä muut tarvittavat
 
 Lisää komennolla
 
-`sh
+```sh
 sudo nano /etc/rc.local
-`
+```
 
 seuraavat rivit juuri ennen viimeistä "exit 0" -riviä:
 
