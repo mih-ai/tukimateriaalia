@@ -29,7 +29,7 @@ Tähän tulee lisätä seuraavat rivit tiedoston loppuun (esimerkkinä jos halut
 
 ```sh
 interface wlan0
-static_ip_address=192.168.2.150/24
+static ip_address=192.168.2.150/24
 nohook wpa_supplicant
 ```
 
