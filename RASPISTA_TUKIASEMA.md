@@ -118,7 +118,7 @@ seuraavat rivit juuri ennen viimeistä "exit 0" -riviä:
 sudo /usr/sbin/hostapd /etc/hostapd/hostapd.conf
 ```
 
-...mutta jos ylläoleva ei toimi (esim. Raspi 3, ajoitus-syyt, käytä seuraavaa:
+...mutta jos ylläoleva ei toimi (esim. Raspi 3, ajoitus-syyt, monimutkaisia...), käytä seuraavaa:
 
 ```sh
 sudo service hostapd restart &
