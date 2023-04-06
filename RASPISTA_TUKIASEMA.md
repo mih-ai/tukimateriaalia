@@ -118,6 +118,14 @@ seuraavat rivit juuri ennen viimeistä "exit 0" -riviä:
 sudo /usr/sbin/hostapd /etc/hostapd/hostapd.conf
 ```
 
+...mutta jos ylläoleva ei toimi (esim. Raspi 3, ajoitus-syyt, käytä seuraavaa:
+
+```sh
+sudo service hostapd restart &
+```
+
+Ja, kun kaikki on tehty, varmista vielä sudo systemctl restart -toiminnoilla sekä hostapd että dnsmasq:n toimivuus. 
+
 Erityisesti, huomaa ylläoleva hostapd-käynnistysrivi ja sen tärkeys! Sen puuttuminen (useissa muissa ohjeissa) on aihettanut monelle paljon päänvaivaa. Tiedosto rc.local huolehtii siitä, että aina kun järjestelmä käynnistyy, kyseinen toiminto tapahtuu ja suoritetaan eli tässä tapauksessa hotspotti laitetaan päälle. Harkitse & -merkkiä loppuun tarvittaessa!
 
 # Entä jos se ei sittenkään toimi noilla ohjeilla?
