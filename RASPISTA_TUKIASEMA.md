@@ -71,7 +71,7 @@ interface=wlan0
 #Huomaa ei bridge-moodia!
 #bridge=br0
 hw_mode=g
-channel=7
+channel=11
 wmm_enabled=0
 macaddr_acl=0
 auth_algs=1
